@@ -6,6 +6,16 @@ import temp_monitor
 
 
 def main():
+    name = input("Ingrese el nombre del archivo:")
+    archivo = open(name, "r")
+    n = int(archivo.readline().strip())
+    monitor = temp_monitor.init(n)
+    for _ in range(n):
+        temp = float(archivo.readline().strip())
+        monitor = temp_monitor.add_reading(monitor, temp)
+    archivo.close()
+    
+
     # TODO: Pedir el nombre del archivo al usuario usando input()
     
     # TODO: Abrir el archivo y leer el numero de lecturas n
