@@ -14,7 +14,8 @@ def main():
         temp = float(archivo.readline().strip())
         monitor = temp_monitor.add_reading(monitor, temp)
     archivo.close()
-    
+
+    temp_monitor.longest_rising_streak()
 
     # TODO: Pedir el nombre del archivo al usuario usando input()
     
