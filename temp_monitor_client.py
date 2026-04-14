@@ -15,7 +15,8 @@ def main():
         monitor = temp_monitor.add_reading(monitor, temp)
     archivo.close()
 
-    temp_monitor.longest_rising_streak()
+    result = temp_monitor.longest_rising_streak(monitor)
+    print (result)
 
     # TODO: Pedir el nombre del archivo al usuario usando input()
     
